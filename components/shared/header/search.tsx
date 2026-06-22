@@ -12,16 +12,12 @@ import { APP_NAME } from '@/lib/constants'
 const categories = ['men', 'women', 'kids', 'accessories']
 export default async function Search() {
   return (
-    <form
-      action='/search'
-      method='GET'
-      className='flex  items-stretch h-10 '
-    >
+    <form action='/search' method='GET' className='flex  items-stretch h-10 '>
       <Select name='category'>
         <SelectTrigger className='w-auto h-full bg-gray-800 text-white border-gray-600 border-r-0 rounded-r-none rounded-l-md focus:ring-0'>
           <SelectValue placeholder='All' />
         </SelectTrigger>
-        <SelectContent position='popper'>
+        <SelectContent>
           <SelectItem value='all'>All</SelectItem>
           {categories.map((category) => (
             <SelectItem key={category} value={category}>
